@@ -15,11 +15,6 @@ class Compteur extends Component {
             <img src={logo} className="App-logo" alt="logo" onClick={this.handleClick} />
             <div> <h4>score : {this.state.count}</h4></div>
          </button>
-      // return (
-      //   <div onClick={this.handleClick}>
-      //       <img src={logo} className="App-logo" alt="logo" onClick={this.handleClick} />
-      //       <div> Score : {this.state.count}</div>
-      //     </div>
       );   
    }
 }

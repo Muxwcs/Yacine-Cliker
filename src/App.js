@@ -3,14 +3,15 @@ import React, { Component } from "react";
 //  STYLE
 import "./init_app.css";
 
-// COMPONENTS REACSTRAP
+// IMPORTS REACSTRAP
 import { Row, Col } from "reactstrap";
 
 
 // HOMEMADE COMPONENTS
-// import NameForm from './NameForm';
-// import Navi from './Navbar.js';
 import Counter from "./Counter";
+import Navi from "./Navbar";
+
+//IMPORTS EN ATTENTE DE COMPILATION
 // import Cookie from './Cookie.js';
 // import LeaderBoard from './LeaderBoard.js';
 // import Add_ons from './Add_ons.js';
@@ -20,17 +21,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <NameForm/> */}
-        <header className="App-header">{/* <Navbar /> */}</header>
+        {/* <NameForm/> ATTENTE DE COMPILATION*/}
+        <header className="App-header"><Navi /> </header>
         <div className="BackGround">
           <Row id="skeleton_one">
             <Col sm="12" lg={{ size: 6, offset: 3 }}>
-              {/* <img
-                href
-                src="https://fakeimg.pl/640x360/"
-                className="img_fictive"
-                alt="fictive"
-              /> */}
               <Counter />
             </Col>
           </Row>
@@ -42,7 +37,7 @@ class App extends Component {
                 className="img_fictive"
                 alt="fictive"
               />
-              {/* Add-ons */}
+              {/* Add-ons ATTENTE DE COMPILATION*/}
             </Col>
             <Col sm="12" lg="6">
               <img
@@ -51,7 +46,7 @@ class App extends Component {
                 className="img_fictive"
                 alt="fictive"
               />
-              {/* Cookie */}
+              {/* Cookie ATTENTE DE COMPILATION*/}
             </Col>
             <Col sm="12" lg="3">
               <img
@@ -60,10 +55,12 @@ class App extends Component {
                 className="img_fictive"
                 alt="fictive"
               />
-              {/* LeaderBoard */}
+              {/* LeaderBoard ATTENTE DE COMPILATION*/}
             </Col>
           </Row>
-        <footer className="App-footer">{/* <Footer />  */}</footer>
+        <footer className="App-footer">
+        {/* <Footer /> ATTENTE DE COMPILATION */}
+        </footer>
         </div>
       </div>
     );

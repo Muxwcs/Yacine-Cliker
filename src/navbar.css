@@ -1,5 +1,13 @@
 Nav, p{
-  letter-spacing: 1em;
+  letter-spacing: 0.1em;
   font-size: 1.2em;
 }
- 
+.navbar{
+  min-height: 10vh;
+}
+a.nav-link{
+  padding: 10%;
+}
+#logo{
+  max-height: 6vh;
+}

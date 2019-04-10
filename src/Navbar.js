@@ -1,67 +1,55 @@
 import React from "react";
-
+import './navbar.css';
+import Logo_cookie from "./img/logo_cookie.svg";
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-  Media,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
 } from "reactstrap";
 
 export default class Navi extends React.Component {
-  constructor(props) {
-    super(props);
-  
-  }
-      
   render() {
     return (
       <div>
         {/* Logo + lien Basile */}
         <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="https://secure.meetupstatic.com/photos/member/6/3/d/5/member_283225557.jpeg">
+          <NavbarBrand >
             <img id = "logo"
-              src="./yacine.png"
-              height="80"
-              className="d-inline-block align-top"
-              alt="yacine"
+              src={Logo_cookie}
+              className="d-inline"
+              alt="cookie"
             />
             {/* Titre */}
           </NavbarBrand>
-          <Nav className="ml-auto" navbar>
-            <p className="text-white font-weight-bold font-italic">
+          <Nav className="" navbar>
+            <p className="d-inline my-auto text-white font-weight-bold font-italic">
               WILDER CLICKER
             </p>
           </Nav>
           {/* Logos + liens réseaux sociaux */}
-          <Nav className="ml-auto" navbar>
-            <NavItem>
+          <Nav className="ml-auto">
+            <NavItem className="d-none d-sm-block d-md-block d-lg-block">
               <NavLink href="https://www.facebook.com">
                 <img
-                  src="https://img.icons8.com/color/48/000000/facebook.png"
+                  src="https://img.icons8.com/color/36/000000/facebook.png"
                   alt="facebook"
                 />
               </NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem className="d-none d-sm-block d-md-block d-lg-block">
               <NavLink href="https://twitter.com/login?lang=fr">
                 <img
-                  src="https://img.icons8.com/color/48/000000/twitter.png"
+                  src="https://img.icons8.com/color/36/000000/twitter.png"
                   alt="twitter"
                 />
               </NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem className="d-none d-sm-block d-md-block d-lg-block">
               <NavLink href="https://www.instagram.com/?hl=fr">
                 <img
-                  src="https://img.icons8.com/color/48/000000/instagram-new.png"
+                  src="https://img.icons8.com/color/36/000000/instagram-new.png"
                   alt="instagram"
                 />
               </NavLink>

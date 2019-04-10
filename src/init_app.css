@@ -1,6 +1,5 @@
 .App {
     text-align: center;
-    /* background-color: lightslategrey; */
     background-image: url("./img/background_1920_1080.jpg");
 }
  /* First Row */
@@ -19,8 +18,6 @@
   /* header fictif prêt à accueillir la navbar de Nath */
 .App-header {
     margin-bottom: 5%;
-    background-color: gainsboro;
-    min-height: 10vh;
 }
  /* images fictives à remplacer par les différents components */
 .img_fictive {

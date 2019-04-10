@@ -1,0 +1,32 @@
+.App {
+    text-align: center;
+    background-image: url("./img/background_1920_1080.jpg");
+}
+ /* First Row */
+#skeleton_one{
+    margin: auto;
+    max-width: 100%;
+    align-content: center;
+    text-align: center;
+}
+ /* Second Row */
+#skeleton_two{
+    margin: 5%;
+    align-items: center;
+}
+
+  /* header fictif prêt à accueillir la navbar de Nath */
+.App-header {
+    margin-bottom: 5%;
+}
+ /* images fictives à remplacer par les différents components */
+.img_fictive {
+    max-width: 100%;
+}
+/* footer fictif prêt à accueillir le footer de Nico */
+.App-footer{
+    background-color: gainsboro;
+    min-height: 10vh;
+}
+
+

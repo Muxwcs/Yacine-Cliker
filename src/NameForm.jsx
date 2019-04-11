@@ -5,18 +5,18 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, FormFeedback
    class NameForm extends Component {
    constructor() {
       super();
-      this.state = { InputValue: "", modal: true, isValid: false };
+      this.state = { InputValue: "", modal: true, isInvalid: false };
       this.handleChange = this.handleChange.bind(this);
       this.toggle = this.toggle.bind(this);
    }
    handleChange = event => {
       this.setState({ InputValue: event.target.value.replace(/[ ]/gi, "") });
-      this.setState({isValid: false})
+      this.setState({isInvalid: false})
    };
    toggle(){
       const nickName = this.state.InputValue;
       if (nickName.length === 0) {
-         this.setState({isValid: true})
+         this.setState({isInvalid: true})
       } else {
          this.setState(prevState => ({
          modal: !prevState.modal
@@ -33,12 +33,12 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, FormFeedback
                <Input id="name" type="text"
                value={this.state.InputValue}
                onChange={this.handleChange} 
-               invalid={this.state.isValid} />
+               invalid={this.state.isInvalid} />
                <FormFeedback>Oh noes... Enter your nickname !</FormFeedback>
             </FormGroup>
          </ModalBody>
          <ModalFooter>
-            <Button color={this.state.isValid ? "danger" : "primary"} onClick={this.toggle}>Sign up</Button>{" "}
+            <Button color={this.state.isInvalid ? "danger" : "primary"} onClick={this.toggle}>Sign up</Button>{" "}
          </ModalFooter>
       </Modal>
       </div>

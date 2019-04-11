@@ -8,11 +8,11 @@ import { Row, Col } from "reactstrap";
 
 
 // HOMEMADE COMPONENTS
-import Counter from "./Counter";
+// import Counter from "./Counter";
 import Navi from "./Navbar";
+import Compteur from "./Compteur";
 
 //IMPORTS EN ATTENTE DE COMPILATION
-// import Cookie from './Cookie.js';
 // import LeaderBoard from './LeaderBoard.js';
 // import Add_ons from './Add_ons.js';
 // import Footer from './Footer.js';
@@ -26,7 +26,7 @@ class App extends Component {
         <div className="BackGround">
           <Row id="skeleton_one">
             <Col sm="12" lg={{ size: 6, offset: 3 }}>
-              <Counter />
+              {/* <Counter /> */}
             </Col>
           </Row>
           <Row id="skeleton_two">
@@ -40,13 +40,13 @@ class App extends Component {
               {/* Add-ons ATTENTE DE COMPILATION*/}
             </Col>
             <Col sm="12" lg="6">
-              <img
+              {/* <img
                 href
                 src="https://fakeimg.pl/640x360/"
                 className="img_fictive"
                 alt="fictive"
-              />
-              {/* Cookie ATTENTE DE COMPILATION*/}
+              /> */}
+              <Compteur />
             </Col>
             <Col sm="12" lg="3">
               <img

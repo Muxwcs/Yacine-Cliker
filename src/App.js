@@ -11,6 +11,7 @@ import { Row, Col } from "reactstrap";
 // import Counter from "./Counter";
 import Navi from "./Navbar";
 import Compteur from "./Compteur";
+import Footer from './Footer.js';
 
 //IMPORTS EN ATTENTE DE COMPILATION
 // import LeaderBoard from './LeaderBoard.js';

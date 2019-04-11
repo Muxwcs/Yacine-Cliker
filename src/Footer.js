@@ -1,7 +1,7 @@
 import React from 'react';
 import { Nav, NavItem, NavLink, Container, Row, Col } from 'reactstrap';
 
-import "../src/Footer.css";
+import "./Footer.css";
 
 
 export default class Footer extends React.Component {

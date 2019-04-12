@@ -14,7 +14,7 @@ export default class Footer extends React.Component {
             © TEAM WILDER CLICKER : Stéphane Van Pé, Nathalie Balotte, Stéphane Jacot, Nicolas Gagnant et Guillaume Ribéroux
             </p>
           </Nav>
-          <Nav className= {`${styles.nav} ml-lg-auto mr-md-auto mx-sm-auto`}>
+          <Nav className= {`${styles.nav} ml-auto mr-md-auto mx-sm-auto`}>
             <NavItem>
               <NavLink href="https://www.facebook.com">
                 <img

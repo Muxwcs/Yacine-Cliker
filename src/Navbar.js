@@ -1,5 +1,5 @@
 import React from "react";
-import './navbar.css';
+import styles from './navbar.module.css';
 import Logo_cookie from "./img/logo_cookie.svg";
 import {
   Navbar,
@@ -14,19 +14,19 @@ export default class Navi extends React.Component {
     return (
       <div>
         {/* Logo + lien Basile */}
-        <Navbar color="dark" dark expand="md">
+        <Navbar className={styles.navbar} color="dark" dark expand="md">
           <NavbarBrand >
-            <img id = "logo"
+            <img 
               src={Logo_cookie}
-              className="d-inline"
+              className={`${styles.logo} d-inline`} 
               alt="cookie"
             />
             {/* Titre */}
           </NavbarBrand>
-          <Nav id="nav_title">
-            <p className="d-inline my-auto text-white font-weight-bold font-italic">
-              WILDER CLICKER
-            </p>
+          <Nav>
+            <h1 className={`${styles.h1} d-inline my-auto text-white font-weight-bold font-italic`}>
+              Wilder Clicker
+            </h1>
           </Nav>
           {/* Logos + liens réseaux sociaux */}
           <Nav className="ml-auto">

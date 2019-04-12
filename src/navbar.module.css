@@ -1,0 +1,10 @@
+h1{
+  letter-spacing: 0.3em;
+  font-size: 1em;
+}
+.navbar{
+  min-height: 10vh;
+}
+.logo{
+  max-height: 6vh;
+}

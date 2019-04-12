@@ -1,8 +1,8 @@
-.footer_row {
+.navbar{
     margin-top: 10%;
     list-style: none;
     min-height: 3vh;
 }
-#footer_title{
+p{
     font-size: 0.8em;
 }

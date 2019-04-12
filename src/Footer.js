@@ -1,20 +1,20 @@
 import React from 'react';
 import { Navbar, Nav, NavItem, NavLink} from 'reactstrap';
 
-import "./footer.css";
+import styles from "./footer.module.css";
 
 
 export default class Footer extends React.Component {
   render() {
     return (
       <div className="">
-        <Navbar className="footer_row mx-auto" color="dark">
-          <Nav id="footer_title">
-            <p className="d-inline my-auto text-white">
+        <Navbar className={`${styles.navbar} mx-auto`} color="dark">
+          <Nav>
+            <p className={`${styles.p} d-inline my-auto text-white`}>
             © TEAM WILDER CLICKER : Stéphane Van Pé, Nathalie Balotte, Stéphane Jacot, Nicolas Gagnant et Guillaume Ribéroux
             </p>
           </Nav>
-          <Nav className="mx-auto">
+          <Nav className="ml-auto">
             <NavItem className="" id="footer_link">
               <NavLink href="https://www.facebook.com">
                 <img

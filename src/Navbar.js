@@ -23,14 +23,14 @@ export default class Navi extends React.Component {
             />
             {/* Titre */}
           </NavbarBrand>
-          <Nav className="" navbar>
+          <Nav id="nav_title">
             <p className="d-inline my-auto text-white font-weight-bold font-italic">
               WILDER CLICKER
             </p>
           </Nav>
           {/* Logos + liens réseaux sociaux */}
           <Nav className="ml-auto">
-            <NavItem className="d-none d-sm-block d-md-block d-lg-block">
+            <NavItem className="d-none d-sm-block d-md-block d-lg-block" id="nav_link">
               <NavLink href="https://www.facebook.com">
                 <img
                   src="https://img.icons8.com/color/36/000000/facebook.png"
@@ -38,7 +38,7 @@ export default class Navi extends React.Component {
                 />
               </NavLink>
             </NavItem>
-            <NavItem className="d-none d-sm-block d-md-block d-lg-block">
+            <NavItem className="d-none d-sm-block d-md-block d-lg-block" id="nav_link">
               <NavLink href="https://twitter.com/login?lang=fr">
                 <img
                   src="https://img.icons8.com/color/36/000000/twitter.png"
@@ -46,7 +46,7 @@ export default class Navi extends React.Component {
                 />
               </NavLink>
             </NavItem>
-            <NavItem className="d-none d-sm-block d-md-block d-lg-block">
+            <NavItem className="d-none d-sm-block d-md-block d-lg-block" id="nav_link">
               <NavLink href="https://www.instagram.com/?hl=fr">
                 <img
                   src="https://img.icons8.com/color/36/000000/instagram-new.png"

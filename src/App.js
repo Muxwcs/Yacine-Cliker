@@ -8,12 +8,13 @@ import { Row, Col } from "reactstrap";
 
 
 // HOMEMADE COMPONENTS
-// import Counter from "./Counter";
+
 import Navi from "./Navbar";
-import Compteur from "./Compteur";
 import Footer from './Footer.js';
 
 //IMPORTS EN ATTENTE DE COMPILATION
+// import Compteur from "./Compteur";
+// import Counter from "./Counter";
 // import LeaderBoard from './LeaderBoard.js';
 // import Add_ons from './Add_ons.js';
 // import Footer from './Footer.js';
@@ -41,13 +42,13 @@ class App extends Component {
               {/* Add-ons ATTENTE DE COMPILATION*/}
             </Col>
             <Col sm="12" lg="6">
-              {/* <img
+              <img
                 href
                 src="https://fakeimg.pl/640x360/"
                 className="img_fictive"
                 alt="fictive"
-              /> */}
-              <Compteur />
+              />
+              {/* <Compteur /> */}
             </Col>
             <Col sm="12" lg="3">
               <img
@@ -60,7 +61,7 @@ class App extends Component {
             </Col>
           </Row>
         <footer className="App-footer">
-        {/* <Footer /> ATTENTE DE COMPILATION */}
+        <Footer></Footer>
         </footer>
         </div>
       </div>

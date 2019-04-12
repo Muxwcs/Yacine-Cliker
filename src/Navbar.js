@@ -24,9 +24,9 @@ export default class Navi extends React.Component {
             {/* Titre */}
           </NavbarBrand>
           <Nav>
-            <h1 className={`${styles.h1} d-inline my-auto text-white font-weight-bold font-italic`}>
+            <h2 className={`${styles.h2} d-inline my-auto text-white font-weight-bold font-italic`}>
               Wilder Clicker
-            </h1>
+            </h2>
           </Nav>
           {/* Logos + liens réseaux sociaux */}
           <Nav className="ml-auto">

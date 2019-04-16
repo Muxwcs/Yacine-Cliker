@@ -8,7 +8,7 @@ import { Row, Col } from "reactstrap";
 
 
 // HOMEMADE COMPONENTS
-import Counter from "./Counter";
+import Compteur from "./Compteur";
 import Navi from "./Navbar";
 
 //IMPORTS EN ATTENTE DE COMPILATION
@@ -16,17 +16,18 @@ import Navi from "./Navbar";
 // import LeaderBoard from './LeaderBoard.js';
 // import Add_ons from './Add_ons.js';
 // import Footer from './Footer.js';
+import VerifPseudo from './VerifPseudo';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <NameForm/> ATTENTE DE COMPILATION*/}
+        <VerifPseudo /> 
         <header className="App-header"><Navi /> </header>
         <div className="BackGround">
           <Row id="skeleton_one">
             <Col sm="12" lg={{ size: 6, offset: 3 }}>
-              <Counter />
+              <Compteur />
             </Col>
           </Row>
           <Row id="skeleton_two">

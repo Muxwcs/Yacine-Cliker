@@ -17,7 +17,7 @@ import Carte from "./Card";
 import VerifPseudo from "./VerifPseudo";
 
 //IMPORTS EN ATTENTE DE COMPILATION
-// import LeaderBoard from './LeaderBoard.js';
+
 // import Add_ons from './Add_ons.js';
 
 class App extends Component {

@@ -9,15 +9,18 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, FormFeedback
       this.handleChange = this.handleChange.bind(this);
       this.toggle = this.toggle.bind(this);
    }
+   //sur chagement de valeur saisie, on interdit un bakspace et on passe la valeur entrée à "Valid"
    handleChange = event => {
       this.setState({ InputValue: event.target.value.replace(/[ ]/gi, "") });
       this.setState({isInvalid: false})
    };
+   //sur click, vérification valeur dans Input
    toggle(){
-      const nickName = this.state.InputValue;
-      if (nickName.length === 0) {
+      const pseudo = this.state.InputValue;
+      if (pseudo.length === 0) {
          this.setState({isInvalid: true})
       } else {
+         localStorage.setItem("pseudo", pseudo);
          this.setState(prevState => ({
          modal: !prevState.modal
          }));
@@ -31,10 +34,10 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, FormFeedback
          <ModalBody>
             <FormGroup>
                <Input id="name" type="text"
-               value={this.state.InputValue}
+               pseudo={this.state.InputValue}
                onChange={this.handleChange} 
                invalid={this.state.isInvalid} />
-               <FormFeedback>Oh noes... Enter your nickname !</FormFeedback>
+               <FormFeedback>Oh noes... Enter your pseudo !</FormFeedback>
             </FormGroup>
          </ModalBody>
          <ModalFooter>

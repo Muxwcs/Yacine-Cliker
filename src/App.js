@@ -11,53 +11,36 @@ import { Row, Col } from "reactstrap";
 
 import Navi from "./Navbar";
 import Footer from './Footer.js';
+import Counter from "./Counter";
+import Clicker from "./Clicker";
+import Carte from "./Card";
+import VerifPseudo from "./VerifPseudo";
 
 //IMPORTS EN ATTENTE DE COMPILATION
-// import Compteur from "./Compteur";
-// import Counter from "./Counter";
 // import LeaderBoard from './LeaderBoard.js';
 // import Add_ons from './Add_ons.js';
-// import Footer from './Footer.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <NameForm/> ATTENTE DE COMPILATION*/}
+        <VerifPseudo />
         <header className="App-header"><Navi /> </header>
         <div className="BackGround">
           <Row id="skeleton_one">
             <Col sm="12" lg={{ size: 6, offset: 3 }}>
-              {/* <Counter /> */}
+              <Counter />
             </Col>
           </Row>
           <Row id="skeleton_two">
             <Col sm="12" lg="3">
-              <img
-                href
-                src="https://fakeimg.pl/640x360/"
-                className="img_fictive"
-                alt="fictive"
-              />
               {/* Add-ons ATTENTE DE COMPILATION*/}
             </Col>
             <Col sm="12" lg="6">
-              <img
-                href
-                src="https://fakeimg.pl/640x360/"
-                className="img_fictive"
-                alt="fictive"
-              />
-              {/* <Compteur /> */}
+              <Clicker />
             </Col>
             <Col sm="12" lg="3">
-              <img
-                href
-                src="https://fakeimg.pl/640x360/"
-                className="img_fictive"
-                alt="fictive"
-              />
-              {/* LeaderBoard ATTENTE DE COMPILATION*/}
+              <Carte />
             </Col>
           </Row>
         <footer className="App-footer">

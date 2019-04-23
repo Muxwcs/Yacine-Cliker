@@ -29,7 +29,7 @@ class Clicker extends Component {
       return (
          <div>
             <RetroHitCounter
-               hits={this.state.score}  /* {GET SCORES} FROM localstorage /// {this.state.count} from compteur */
+               hits={this.state.score} 
                withBorder={false}
                withGlow={true}
                minLength={3}

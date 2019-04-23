@@ -25,7 +25,7 @@ class App extends Component {
         <div className="BackGround">
           <Row id="skeleton_one">
             <Col sm="12" lg={{ size: 6, offset: 3 }}>
-              <Compteur />
+              {/* <Counter /> */}
             </Col>
           </Row>
           <Row id="skeleton_two">

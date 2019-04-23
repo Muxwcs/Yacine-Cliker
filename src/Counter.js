@@ -3,7 +3,7 @@ import RetroHitCounter from "react-retro-hit-counter";
 
 const Counter = () => (
   <RetroHitCounter
-    hits={100}  /* {GET SCORES} FROM localstorage /// {this.state.count} from compteur */
+    hits={localStorage.getItem("score")}  /* {GET SCORES} FROM localstorage /// {this.state.count} from compteur */
     withBorder={false}
     withGlow={true}
     minLength={3}

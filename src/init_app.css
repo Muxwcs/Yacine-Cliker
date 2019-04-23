@@ -1,6 +1,7 @@
 .App {
     text-align: center;
-    background-image: url("./img/background_1920_1080.jpg");
+    background-image: url("./img/backgroundd_1920_1080.png");
+    
 }
  /* First Row */
 #skeleton_one{
@@ -23,10 +24,6 @@
 .img_fictive {
     max-width: 100%;
 }
-/* footer fictif prêt à accueillir le footer de Nico */
-.App-footer{
-    background-color: gainsboro;
-    min-height: 10vh;
-}
+
 
 

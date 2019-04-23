@@ -1,5 +1,5 @@
 import React from "react";
-import './navbar.css';
+import styles from './navbar.module.css';
 import Logo_cookie from "./img/logo_cookie.svg";
 import {
   Navbar,
@@ -14,23 +14,23 @@ export default class Navi extends React.Component {
     return (
       <div>
         {/* Logo + lien Basile */}
-        <Navbar color="dark" dark expand="md">
+        <Navbar className={styles.navbar} color="dark" dark expand="md">
           <NavbarBrand >
-            <img id = "logo"
+            <img 
               src={Logo_cookie}
-              className="d-inline"
+              className={`${styles.logo} d-inline`} 
               alt="cookie"
             />
             {/* Titre */}
           </NavbarBrand>
-          <Nav className="" navbar>
-            <p className="d-inline my-auto text-white font-weight-bold font-italic">
-              WILDER CLICKER
-            </p>
+          <Nav>
+            <h2 className={`${styles.h2} d-inline my-auto text-white font-weight-bold font-italic`}>
+              Wilder Clicker
+            </h2>
           </Nav>
           {/* Logos + liens réseaux sociaux */}
           <Nav className="ml-auto">
-            <NavItem className="d-none d-sm-block d-md-block d-lg-block">
+            <NavItem className="d-none d-sm-block d-md-block d-lg-block" id="nav_link">
               <NavLink href="https://www.facebook.com">
                 <img
                   src="https://img.icons8.com/color/36/000000/facebook.png"
@@ -38,7 +38,7 @@ export default class Navi extends React.Component {
                 />
               </NavLink>
             </NavItem>
-            <NavItem className="d-none d-sm-block d-md-block d-lg-block">
+            <NavItem className="d-none d-sm-block d-md-block d-lg-block" id="nav_link">
               <NavLink href="https://twitter.com/login?lang=fr">
                 <img
                   src="https://img.icons8.com/color/36/000000/twitter.png"
@@ -46,7 +46,7 @@ export default class Navi extends React.Component {
                 />
               </NavLink>
             </NavItem>
-            <NavItem className="d-none d-sm-block d-md-block d-lg-block">
+            <NavItem className="d-none d-sm-block d-md-block d-lg-block" id="nav_link">
               <NavLink href="https://www.instagram.com/?hl=fr">
                 <img
                   src="https://img.icons8.com/color/36/000000/instagram-new.png"

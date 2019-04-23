@@ -8,21 +8,19 @@ import { Row, Col } from "reactstrap";
 
 
 // HOMEMADE COMPONENTS
-import Compteur from "./Compteur";
 import Navi from "./Navbar";
+import Footer from './Footer.js';
+import Counter from "./Counter";
+import Clicker from "./Clicker";
+import Carte from "./Card";
+import VerifPseudo from "./VerifPseudo";
 
-//IMPORTS EN ATTENTE DE COMPILATION
-// import Cookie from './Cookie.js';
-// import LeaderBoard from './LeaderBoard.js';
-// import Add_ons from './Add_ons.js';
-// import Footer from './Footer.js';
-import VerifPseudo from './VerifPseudo';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <VerifPseudo /> 
+        <VerifPseudo />
         <header className="App-header"><Navi /> </header>
         <div className="BackGround">
           <Row id="skeleton_one">
@@ -32,35 +30,17 @@ class App extends Component {
           </Row>
           <Row id="skeleton_two">
             <Col sm="12" lg="3">
-              <img
-                href
-                src="https://fakeimg.pl/640x360/"
-                className="img_fictive"
-                alt="fictive"
-              />
               {/* Add-ons ATTENTE DE COMPILATION*/}
             </Col>
             <Col sm="12" lg="6">
-              <img
-                href
-                src="https://fakeimg.pl/640x360/"
-                className="img_fictive"
-                alt="fictive"
-              />
-              {/* Cookie ATTENTE DE COMPILATION*/}
+              <Clicker />
             </Col>
             <Col sm="12" lg="3">
-              <img
-                href
-                src="https://fakeimg.pl/640x360/"
-                className="img_fictive"
-                alt="fictive"
-              />
-              {/* LeaderBoard ATTENTE DE COMPILATION*/}
+              <Carte />
             </Col>
           </Row>
         <footer className="App-footer">
-        {/* <Footer /> ATTENTE DE COMPILATION */}
+        <Footer></Footer>
         </footer>
         </div>
       </div>

@@ -37,7 +37,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, FormFeedback
                pseudo={this.state.InputValue}
                onChange={this.handleChange} 
                invalid={this.state.isInvalid} />
-               <FormFeedback>Oh noes... Enter your pseudo !</FormFeedback>
+               <FormFeedback>Oh F**k... Please enter your nickname stupid guy !</FormFeedback>
             </FormGroup>
          </ModalBody>
          <ModalFooter>
@@ -48,4 +48,4 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, FormFeedback
       );
    }
 }
-export default NameForm;
+export default NameForm

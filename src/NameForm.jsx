@@ -58,4 +58,4 @@ import axios from "axios";
       );
    }
 }
-export default NameForm;
+export default NameForm

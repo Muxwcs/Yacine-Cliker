@@ -8,7 +8,6 @@ import { Row, Col } from "reactstrap";
 
 
 // HOMEMADE COMPONENTS
-
 import Navi from "./Navbar";
 import Footer from './Footer.js';
 import Counter from "./Counter";
@@ -16,9 +15,6 @@ import Clicker from "./Clicker";
 import Carte from "./Card";
 import VerifPseudo from "./VerifPseudo";
 
-//IMPORTS EN ATTENTE DE COMPILATION
-// import LeaderBoard from './LeaderBoard.js';
-// import Add_ons from './Add_ons.js';
 
 class App extends Component {
   render() {
@@ -29,7 +25,7 @@ class App extends Component {
         <div className="BackGround">
           <Row id="skeleton_one">
             <Col sm="12" lg={{ size: 6, offset: 3 }}>
-              <Counter />
+              <Compteur />
             </Col>
           </Row>
           <Row id="skeleton_two">

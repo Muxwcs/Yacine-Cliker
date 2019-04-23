@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import axios from 'axios';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, FormFeedback, FormGroup} from "reactstrap";
+import axios from "axios";
 
    class NameForm extends Component {
    constructor() {
@@ -21,6 +22,15 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, FormFeedback
          this.setState({isInvalid: true})
       } else {
          localStorage.setItem("pseudo", pseudo);
+         axios.post('http://localhost:8000/user/subscribe', {
+            'pseudo': pseudo,
+         })
+         .then(function (response) {
+         console.log(response);
+         })
+         .catch(function (error) {
+         console.log(error);
+         });
          this.setState(prevState => ({
          modal: !prevState.modal
          }));

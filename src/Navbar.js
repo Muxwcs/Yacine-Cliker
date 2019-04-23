@@ -30,16 +30,16 @@ export default class Navi extends React.Component {
           </Nav>
           {/* Logos + liens réseaux sociaux */}
           <Nav className="ml-auto">
-            <NavItem className="d-none d-sm-block d-md-block d-lg-block" id="nav_link">
-              <NavLink href="https://www.facebook.com">
+            <NavItem className="d-none d-sm-block d-md-block d-lg-block" id="nav_link" >
+              <NavLink href="https://www.facebook.com" target = "blank">
                 <img
-                  src="https://img.icons8.com/color/36/000000/facebook.png"
+                  src="https://img.icons8.com/color/36/000000/facebook.png" 
                   alt="facebook"
                 />
               </NavLink>
             </NavItem>
-            <NavItem className="d-none d-sm-block d-md-block d-lg-block" id="nav_link">
-              <NavLink href="https://twitter.com/login?lang=fr">
+            <NavItem className="d-none d-sm-block d-md-block d-lg-block" id="nav_link" >
+              <NavLink href="https://twitter.com/login?lang=fr" target = "blank">
                 <img
                   src="https://img.icons8.com/color/36/000000/twitter.png"
                   alt="twitter"
@@ -47,7 +47,7 @@ export default class Navi extends React.Component {
               </NavLink>
             </NavItem>
             <NavItem className="d-none d-sm-block d-md-block d-lg-block" id="nav_link">
-              <NavLink href="https://www.instagram.com/?hl=fr">
+              <NavLink href="https://www.instagram.com/?hl=fr" target = "blank">
                 <img
                   src="https://img.icons8.com/color/36/000000/instagram-new.png"
                   alt="instagram"

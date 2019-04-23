@@ -8,14 +8,12 @@ import { Row, Col } from "reactstrap";
 
 
 // HOMEMADE COMPONENTS
-
 import Navi from "./Navbar";
 import Footer from './Footer.js';
 import Counter from "./Counter";
 import Clicker from "./Clicker";
 import Carte from "./Card";
 import VerifPseudo from "./VerifPseudo";
-
 
 
 class App extends Component {
@@ -27,7 +25,7 @@ class App extends Component {
         <div className="BackGround">
           <Row id="skeleton_one">
             <Col sm="12" lg={{ size: 6, offset: 3 }}>
-              <Counter />
+              <Compteur />
             </Col>
           </Row>
           <Row id="skeleton_two">

@@ -10,5 +10,4 @@ class VerifPseudo extends Component {
         )
     }
 }
-
 export default VerifPseudo;

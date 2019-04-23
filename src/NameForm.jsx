@@ -48,4 +48,4 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, FormFeedback
       );
    }
 }
-export default NameForm;
+export default NameForm

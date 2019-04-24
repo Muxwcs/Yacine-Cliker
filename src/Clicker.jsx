@@ -7,23 +7,28 @@ import RetroHitCounter from "react-retro-hit-counter";
 class Clicker extends Component {
    constructor(props) {
    super(props);
-      this.state = {users: [],score : 0,} // score à initialiser avec valeur dans serveur
+   //TODO: Get the score from API to put it in the state
+      this.state = {users: [],score : 0, id: localStorage.getItem("id")} // score à initialiser avec valeur dans serveur
       this.handleClick = this.handleClick.bind(this);
    }
-   // componentDidMount() {
-   //    axios
-   //    .get("http://localhost:8000/user/{id}'")
-   //    .then(res => {this.setState({ users: res.data})})
-   // }
+  
 
    // sur click : variable à renvoyer : score dans pseudo
-   handleClick = () => {
-      //const score = this.state.score;
-      // const userPseudo = this.props.match.params.filter;
-      // score={users.filter(score => users.pseudo(userPseudo))}
-      this.setState({ score: this.state.score +1 });
-      // localStorage.setItem("score", score);
-};
+   handleClick = event => {
+      this.setState({ score: this.state.score +1}); 
+      const pseudo = localStorage.getItem(pseudo)
+      let scoreUp = 0;
+
+      const scoreUpdate = {
+         score: scoreUp + 1,
+         };
+         axios.put(`http://localhost:8000/user/${this.state.id}/click`, scoreUpdate)
+         .then(response => 
+         console.log(response.data));
+   };
+
+     
+
    render() {
       return (
          <div>
@@ -52,3 +57,15 @@ class Clicker extends Component {
    }
 }
 export default Clicker;
+
+ //const score = this.state.score;
+      // const userPseudo = this.props.match.params.filter;
+      // score={users.filter(score => users.pseudo(userPseudo))} 
+      // localStorage.setItem("score", score); 
+      
+
+ // componentDidMount() {
+   //    axios
+   //    .get("http://localhost:8000/user/{id}'")
+   //    .then(res => {this.setState({ users: res.data})})
+   // }

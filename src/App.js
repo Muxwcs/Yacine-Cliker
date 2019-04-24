@@ -10,9 +10,8 @@ import { Row, Col } from "reactstrap";
 // HOMEMADE COMPONENTS
 import Navi from "./Navbar";
 import Footer from './Footer.js';
-import Counter from "./Counter";
 import Clicker from "./Clicker";
-import Carte from "./Card";
+import Tableaux from "./Tableaux";
 import VerifPseudo from "./VerifPseudo";
 
 
@@ -35,7 +34,7 @@ class App extends Component {
               <Clicker />
             </Col>
             <Col sm="12" lg="3">
-              <Carte />
+            <Tableaux/>
             </Col>
           </Row>
         <footer className="App-footer">

@@ -1,6 +1,4 @@
 import React from "react";
-import { Table } from "reactstrap";
-import styles from "./Table.module.css";
 import Axios from "axios";
 
 export default class Tableau extends React.Component {

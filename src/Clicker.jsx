@@ -10,17 +10,16 @@ class Clicker extends Component {
       this.state = {users: [],score : 0,} // score à initialiser avec valeur dans serveur
       this.handleClick = this.handleClick.bind(this);
    }
-   componentDidMount() {
-      axios
-      .get("http://localhost:8000/user/{id}'")
-      .then(res => {this.setState({ users: res.data})})
-   }
+   // componentDidMount() {
+   //    axios
+   //    .get("http://localhost:8000/user/{id}'")
+   //    .then(res => {this.setState({ users: res.data})})
+   // }
 
    // sur click : variable à renvoyer : score dans pseudo
    handleClick = () => {
-      const score = this.state.score;
+      //const score = this.state.score;
       // const userPseudo = this.props.match.params.filter;
-      // const score = this.state;
       // score={users.filter(score => users.pseudo(userPseudo))}
       this.setState({ score: this.state.score +1 });
       // localStorage.setItem("score", score);

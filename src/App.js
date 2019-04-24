@@ -11,7 +11,7 @@ import { Row, Col } from "reactstrap";
 import Navi from "./Navbar";
 import Footer from './Footer.js';
 import Clicker from "./Clicker";
-import Tableau from "./Table";
+import Tableaux from "./Tableaux";
 import VerifPseudo from "./VerifPseudo";
 
 
@@ -34,7 +34,7 @@ class App extends Component {
               <Clicker />
             </Col>
             <Col sm="12" lg="3">
-            <Tableau/>
+            <Tableaux/>
             </Col>
           </Row>
         <footer className="App-footer">

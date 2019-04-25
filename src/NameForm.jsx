@@ -26,7 +26,7 @@ import axios from "axios";
             'pseudo': pseudo,
          })
          .then(function (response) {
-         console.log(response.data.insertId);
+         console.log(response.data);
          let id = response.data.insertId;
          localStorage.setItem("id", id);
 

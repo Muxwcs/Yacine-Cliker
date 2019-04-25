@@ -8,7 +8,7 @@ class Clicker extends Component {
    constructor(props) {
    super(props);
    //TODO: Get the score from API to put it in the state
-      this.state = {users: [],score : 0, id: localStorage.getItem("id")} // score à initialiser avec valeur dans serveur
+      this.state = {users: [],score : 0, id: localStorage.getItem("id")} 
       this.handleClick = this.handleClick.bind(this);
    }
   
@@ -16,9 +16,7 @@ class Clicker extends Component {
    // sur click : variable à renvoyer : score dans pseudo
    handleClick = event => {
       this.setState({ score: this.state.score +1}); 
-      const pseudo = localStorage.getItem(pseudo)
       let scoreUp = 0;
-
       const scoreUpdate = {
          score: scoreUp + 1,
          };
@@ -26,8 +24,6 @@ class Clicker extends Component {
          .then(response => 
          console.log(response.data));
    };
-
-     
 
    render() {
       return (

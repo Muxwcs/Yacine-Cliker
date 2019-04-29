@@ -7,19 +7,22 @@ import RetroHitCounter from "react-retro-hit-counter";
 class Clicker extends Component {
   constructor(props) {
     super(props);
-    //TODO: Get the score from API to put it in the state
-    this.state = { users: [], score: 0, id: localStorage.getItem("id") };
+    this.state = {
+      users: [],
+      score: 0,
+      id: localStorage.getItem("id")
+    };
     this.handleClick = this.handleClick.bind(this);
   }
   getScore() {
     axios
       .get(`http://192.168.88.228:8000/user/${this.state.id}`)
       .then(response => {
-        // console.log(response.data[0].score);
+        //if {{response.data[0].score === null}
         this.setState({ score: response.data[0].score });
       });
   }
-  componentDidMount() {
+  componentDidUpdate() {
     this.getScore();
   }
   // sur click : variable à renvoyer : score dans pseudo

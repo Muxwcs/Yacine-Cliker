@@ -38,4 +38,3 @@ export default class Tableau extends React.Component {
     );
   }
 }
-ReactDOM.render(<Tableau />, document.getElementById("root"));

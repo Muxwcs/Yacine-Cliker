@@ -11,6 +11,7 @@ import {
   FormGroup
 } from "reactstrap";
 import axios from "axios";
+import Clicker from "./Clicker";
 
 class NameForm extends Component {
   constructor() {
@@ -33,12 +34,16 @@ class NameForm extends Component {
       localStorage.setItem("pseudo", pseudo);
       axios
         .post("http://192.168.88.228:8000/user/subscribe", {
-          pseudo: pseudo
+          pseudo: pseudo,
+          score: 0
         })
         .then(function(response) {
           console.log(response.data);
           let id = response.data.insertId;
           localStorage.setItem("id", id);
+          // TODO : re render composant
+          window.location.reload();
+          // Clicker.forceUpdate();
         })
         .catch(function(error) {
           console.log(error);
@@ -50,7 +55,7 @@ class NameForm extends Component {
   }
   render() {
     return (
-      <div>
+      <>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>
             <h3>Login</h3>
@@ -78,7 +83,7 @@ class NameForm extends Component {
             </Button>{" "}
           </ModalFooter>
         </Modal>
-      </div>
+      </>
     );
   }
 }

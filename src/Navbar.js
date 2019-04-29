@@ -13,7 +13,7 @@ export default class Navi extends React.Component {
   render() {
     return (
       <div>
-        {/* Logo + lien Basile */}
+        {/* Logo */}
         <Navbar className={styles.navbar} color="dark" dark expand="md">
           <NavbarBrand >
             <img 

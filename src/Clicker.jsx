@@ -18,7 +18,6 @@ class Clicker extends Component {
     axios
       .get(`http://192.168.88.228:8000/user/${this.state.id}`)
       .then(response => {
-        //if {{response.data[0].score === null}
         this.setState({ score: response.data[0].score });
       });
   }
@@ -60,7 +59,6 @@ class Clicker extends Component {
           glowStrength={0.4}
           glowSize={10}
         />
-        <p> </p>
         <p>
           <img
             id="cookie"
@@ -76,8 +74,3 @@ class Clicker extends Component {
   }
 }
 export default Clicker;
-
-//const score = this.state.score;
-// const userPseudo = this.props.match.params.filter;
-// score={users.filter(score => users.pseudo(userPseudo))}
-// localStorage.setItem("score", score);

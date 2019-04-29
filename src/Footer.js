@@ -1,8 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, NavItem, NavLink} from 'reactstrap';
-
 import styles from "./footer.module.css";
-
 
 export default class Footer extends React.Component {
   render() {
@@ -42,8 +40,6 @@ export default class Footer extends React.Component {
           </Nav>
         </Navbar>
       </div>
-
-
     );
   }
 }

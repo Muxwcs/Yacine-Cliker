@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Navi />{" "}
+          <Navi />
         </header>
         <div className="BackGround">
           <Row id="skeleton_one">
@@ -43,5 +43,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

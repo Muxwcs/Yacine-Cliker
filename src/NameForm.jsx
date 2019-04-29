@@ -70,7 +70,7 @@ class NameForm extends Component {
                 invalid={this.state.isInvalid}
               />
               <FormFeedback>
-                Oh F**k... Please enter your nickname stupid guy !
+                Oh Noes... Please enter your nickname guy !
               </FormFeedback>
             </FormGroup>
           </ModalBody>

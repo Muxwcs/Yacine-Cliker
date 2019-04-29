@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import ReactDOM from "react-dom";
 
 export default class Tableau extends React.Component {
   constructor(props) {
@@ -8,7 +9,15 @@ export default class Tableau extends React.Component {
       users: []
     };
   }
+  // Rafraichissement du tableau (timer 100 ms)
   componentDidMount() {
+    this.tableauRefresh = setInterval(() => this.refresh(), 100);
+  }
+  componentWillUnmount() {
+    clearInterval(this.tableauRefresh);
+  }
+  // Récupération des users (mapping)
+  refresh() {
     Axios.get("http://localhost:8000/user/").then(response => {
       this.setState({ users: response.data });
     });
@@ -29,3 +38,4 @@ export default class Tableau extends React.Component {
     );
   }
 }
+ReactDOM.render(<Tableau />, document.getElementById("root"));

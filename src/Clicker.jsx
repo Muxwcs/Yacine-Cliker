@@ -12,14 +12,14 @@ class Clicker extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   getScore() {
-    axios.get(`http://localhost:8000/user/${this.state.id}`) 
-      .then(response=>{console.log(response.data[0].score);
-         this.setState({score: response.data[0].score})
-      })
+    axios.get(`http://192.168.88.228/user/${this.state.id}`).then(response => {
+      console.log(response.data[0].score);
+      this.setState({ score: response.data[0].score });
+    });
   }
-componentDidMount(){
-   this.getScore()
-}
+  componentDidMount() {
+    this.getScore();
+  }
   // sur click : variable à renvoyer : score dans pseudo
   handleClick = event => {
     this.setState({ score: this.state.score + 1 });
@@ -28,7 +28,7 @@ componentDidMount(){
       score: scoreUp + 1
     };
     axios
-      .put(`http://localhost:8000/user/${this.state.id}/click`, scoreUpdate)
+      .put(`http://192.168.88.228/user/${this.state.id}/click`, scoreUpdate)
       .then(response => console.log(response.data));
   };
 

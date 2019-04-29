@@ -12,12 +12,14 @@ import Footer from "./Footer.js";
 import Clicker from "./Clicker";
 import Tableaux from "./Tableaux";
 import NameForm from "./NameForm";
+import Router from "./Router";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
+   render() {
+      return (
+         <div className="App">
+            <Router />
+            {/* <header className="App-header">
           <Navi />{" "}
         </header>
         <div className="BackGround">
@@ -26,7 +28,7 @@ class App extends Component {
           </Row>
           <Row id="skeleton_two">
             <Col sm="12" lg="3">
-              {/* Add-ons ATTENTE DE COMPILATION*/}
+              {/* Add-ons ATTENTE DE COMPILATION
             </Col>
             <Col sm="12" lg="6">
               {"pseudo" in localStorage ? <Clicker /> : <NameForm />}
@@ -38,10 +40,10 @@ class App extends Component {
           <footer className="App-footer">
             <Footer />
           </footer>
-        </div>
-      </div>
-    );
-  }
+        </div> */}
+         </div>
+      );
+   }
 }
 
 export default App;

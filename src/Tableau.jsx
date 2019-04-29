@@ -18,7 +18,7 @@ export default class Tableau extends React.Component {
   }
   // Récupération des users (mapping)
   refresh() {
-    Axios.get("http://localhost:8000/user/").then(response => {
+    Axios.get("http://192.168.88.228/user/").then(response => {
       this.setState({ users: response.data });
     });
   }

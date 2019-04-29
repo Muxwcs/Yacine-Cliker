@@ -6,9 +6,6 @@
  /* First Row */
 #skeleton_one{
     margin: auto;
-    max-width: 100%;
-    align-content: center;
-    text-align: center;
 }
  /* Second Row */
 #skeleton_two{
@@ -20,10 +17,7 @@
 .App-header {
     margin-bottom: 5%;
 }
- /* images fictives à remplacer par les différents components */
-.img_fictive {
-    max-width: 100%;
-}
+
 
 
 

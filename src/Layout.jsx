@@ -5,13 +5,13 @@ import Footer from "./Footer";
 
 const Layout = ({ children }) => {
    return (
-      <>
+      <React.Fragment>
          <Navi />
-         <div className="container-fluid">
-            <Row>{children}</Row>
+         <div className="container-fluid" style={{ justifyContent: "center", alignItems: "center" }}>
+            {children}
          </div>
          <Footer />
-      </>
+      </React.Fragment>
    );
 };
 

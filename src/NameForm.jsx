@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Button, Input, FormFeedback, FormGroup } from "reactstrap";
 import axios from "axios";
-import { Link, Redirect } from "react-router-dom";
-
+import { Row, Col } from "reactstrap";
 class NameForm extends Component {
    constructor() {
       super();
       this.state = { InputValue: "", isInvalid: false };
       this.handleChange = this.handleChange.bind(this);
       this.sendForm = this.sendForm.bind(this);
+      this.onClick = this.onClick.bind(this);
    }
    //sur chagement de valeur saisie, on interdit un bakspace et on passe la valeur entrée à "Valid"
    handleChange = event => {
@@ -29,30 +29,37 @@ class NameForm extends Component {
             .then(function(response) {
                let id = response.data.insertId;
                localStorage.setItem("id", id);
+               this.props.redirect = !this.props.redirect;
             })
             .catch(function(error) {
                console.log(error);
             });
-         <Redirect to="/game" />;
       }
+   }
+
+   onClick() {
+      this.sendForm();
+      this.props.redirect();
    }
    render() {
       return (
-         <>
-            <FormGroup>
-               <Input
-                  id="name"
-                  type="text"
-                  pseudo={this.state.InputValue}
-                  onChange={this.handleChange}
-                  invalid={this.state.isInvalid}
-               />
-               <FormFeedback>Oh Noes... Please enter your nickname guy !</FormFeedback>
-            </FormGroup>
-            <Button color={this.state.isInvalid ? "danger" : "primary"} onClick={this.sendForm}>
-               Sign up
-            </Button>
-         </>
+         <Row>
+            <Col lg={{ size: 2, offset: 5 }}>
+               <FormGroup>
+                  <Input
+                     id="name"
+                     type="text"
+                     pseudo={this.state.InputValue}
+                     onChange={this.handleChange}
+                     invalid={this.state.isInvalid}
+                  />
+                  <FormFeedback>Oh Noes... Please enter your nickname guy !</FormFeedback>
+               </FormGroup>
+               <Button color={this.state.isInvalid ? "danger" : "primary"} onClick={this.onClick}>
+                  Sign up
+               </Button>
+            </Col>
+         </Row>
       );
    }
 }

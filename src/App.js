@@ -17,30 +17,8 @@ import Router from "./Router";
 class App extends Component {
    render() {
       return (
-         <div className="App">
+         <div className="App" style={{ minHeight: "100vh" }}>
             <Router />
-            {/* <header className="App-header">
-          <Navi />{" "}
-        </header>
-        <div className="BackGround">
-          <Row id="skeleton_one">
-            <Col sm="12" lg={{ size: 6, offset: 3 }} />
-          </Row>
-          <Row id="skeleton_two">
-            <Col sm="12" lg="3">
-              {/* Add-ons ATTENTE DE COMPILATION
-            </Col>
-            <Col sm="12" lg="6">
-              {"pseudo" in localStorage ? <Clicker /> : <NameForm />}
-            </Col>
-            <Col sm="12" lg="3">
-              <Tableaux />
-            </Col>
-          </Row>
-          <footer className="App-footer">
-            <Footer />
-          </footer>
-        </div> */}
          </div>
       );
    }

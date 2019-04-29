@@ -1,6 +1,5 @@
 import React from "react";
 import Axios from "axios";
-import ReactDOM from "react-dom";
 
 export default class Tableau extends React.Component {
   constructor(props) {

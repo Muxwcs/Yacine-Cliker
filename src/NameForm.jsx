@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import axios from 'axios';
 import {
   Button,
   Modal,
@@ -11,7 +10,6 @@ import {
   FormGroup
 } from "reactstrap";
 import axios from "axios";
-import Clicker from "./Clicker";
 
 class NameForm extends Component {
   constructor() {
@@ -41,9 +39,7 @@ class NameForm extends Component {
           console.log(response.data);
           let id = response.data.insertId;
           localStorage.setItem("id", id);
-          // TODO : re render composant
           window.location.reload();
-          // Clicker.forceUpdate();
         })
         .catch(function(error) {
           console.log(error);
@@ -80,7 +76,7 @@ class NameForm extends Component {
               onClick={this.toggle}
             >
               Sign up
-            </Button>{" "}
+            </Button>
           </ModalFooter>
         </Modal>
       </>

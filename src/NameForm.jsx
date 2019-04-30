@@ -16,7 +16,7 @@ class NameForm extends Component {
       this.setState({ isInvalid: false });
    };
    //sur click, vérification valeur dans Input
-   sendForm() {
+   sendForm(callback) {
       const pseudo = this.state.InputValue;
       if (pseudo.length === 0) {
          this.setState({ isInvalid: true });
@@ -29,7 +29,8 @@ class NameForm extends Component {
             .then(function(response) {
                let id = response.data.insertId;
                localStorage.setItem("id", id);
-               this.props.redirect = !this.props.redirect;
+               // this.props.redirect = !this.props.redirect;
+               callback();
             })
             .catch(function(error) {
                console.log(error);
@@ -38,8 +39,7 @@ class NameForm extends Component {
    }
 
    onClick() {
-      this.sendForm();
-      this.props.redirect();
+      this.sendForm(this.props.redirect);
    }
    render() {
       return (

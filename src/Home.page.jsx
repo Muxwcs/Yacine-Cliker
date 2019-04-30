@@ -17,7 +17,7 @@ export default class Homepage extends Component {
    }
 
    componentDidMount() {
-      if (localStorage.getItem("pseudo")) {
+      if (localStorage.getItem("id")) {
          this.setState({
             redirect: true
          });

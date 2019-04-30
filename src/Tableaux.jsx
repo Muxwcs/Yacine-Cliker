@@ -1,6 +1,7 @@
 import React from "react";
 import Tableau from "./Tableau";
 import { Table } from "reactstrap";
+
 import styles from "./Table.module.css";
 
 export default function Tableaux() {

@@ -29,7 +29,6 @@ class NameForm extends Component {
             .then(function(response) {
                let id = response.data.insertId;
                localStorage.setItem("id", id);
-               // this.props.redirect = !this.props.redirect;
                callback();
             })
             .catch(function(error) {

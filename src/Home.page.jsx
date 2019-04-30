@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import Layout from "./Layout";
+import LayoutHome from "./LayoutHome";
 import NameForm from "./NameForm";
 
 export default class Homepage extends Component {
@@ -29,9 +29,9 @@ export default class Homepage extends Component {
          return <Redirect to="/game" />;
       }
       return (
-         <Layout style={{ alignContent: "center" }}>
+         <LayoutHome style={{ alignContent: "center" }}>
             <NameForm redirect={this.handler.bind(this)} />
-         </Layout>
+         </LayoutHome>
       );
    }
 }

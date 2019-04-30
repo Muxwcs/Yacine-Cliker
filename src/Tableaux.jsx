@@ -2,21 +2,21 @@ import React from "react";
 import Tableau from "./Tableau";
 import { Table } from "reactstrap";
 //  STYLE
-import "./Table.module.css";
+import styles from "./Table.module.css";
 
 export default function Tableaux() {
   return (
     <div>
-      <h1>Leaderboard</h1>
+      <p className={`${styles.title}`}>Leaderboard</p>
       <Table dark>
         <thead>
           <tr>
             <th />
             <th>
-              <h6>Pseudo</h6>
+              <h3>Pseudo</h3>
             </th>
             <th>
-              <h6>Score</h6>
+              <h3>Score</h3>
             </th>
           </tr>
         </thead>

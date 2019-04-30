@@ -21,6 +21,9 @@ class Clicker extends Component {
         this.setState({ score: response.data[0].score });
       });
   }
+  componentDidMount() {
+    this.getScore();
+  }
   componentDidUpdate() {
     this.getScore();
   }

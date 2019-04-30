@@ -75,8 +75,3 @@ class Clicker extends Component {
    }
 }
 export default Clicker;
-
-//const score = this.state.score;
-// const userPseudo = this.props.match.params.filter;
-// score={users.filter(score => users.pseudo(userPseudo))}
-// localStorage.setItem("score", score);

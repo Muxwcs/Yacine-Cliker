@@ -1,13 +1,13 @@
 import React from "react";
 import Tableau from "./Tableau";
 import { Table } from "reactstrap";
-//  STYLE
+
 import styles from "./Table.module.css";
 
 export default function Tableaux() {
   return (
     <div>
-      <p className={`${styles.title}`}>Leaderboard</p>
+      <p className={`${styles.title}`} >LEADERBOARD</p>
       <Table dark>
         <thead>
           <tr>

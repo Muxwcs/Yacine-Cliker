@@ -16,8 +16,11 @@ class Clicker extends Component {
    }
    getScore() {
       axios.get(`http://192.168.88.228:8000/user/${this.state.id}`).then(response => {
-         //if {{response.data[0].score === null}
+         if (response.data[0].score>0){
          this.setState({ score: response.data[0].score });
+         } else {
+            return <alert color="danger">Database empty, contact us for more information</alert>
+         }
       });
    }
    componentDidUpdate() {
@@ -59,7 +62,6 @@ class Clicker extends Component {
                glowStrength={0.4}
                glowSize={10}
             />
-            <p> </p>
             <p>
                <img
                   id="cookie"

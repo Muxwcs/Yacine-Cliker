@@ -21,17 +21,11 @@ class App extends Component {
           <Navi />
         </header>
         <div className="BackGround">
-          <Row id="skeleton_one">
-            <Col sm="12" lg={{ size: 6, offset: 3 }} />
-          </Row>
           <Row id="skeleton_two">
-            <Col sm="12" lg="3">
-              {/* Add-ons ATTENTE DE COMPILATION*/}
-            </Col>
             <Col sm="12" lg="6">
               {"pseudo" in localStorage ? <Clicker /> : <NameForm />}
             </Col>
-            <Col sm="12" lg="3">
+            <Col sm={{size:8, offset:2}} lg={{size:3, offset:2}}>
               <Tableaux />
             </Col>
           </Row>

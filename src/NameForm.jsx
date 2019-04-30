@@ -64,6 +64,11 @@ class NameForm extends Component {
                 pseudo={this.state.InputValue}
                 onChange={this.handleChange}
                 invalid={this.state.isInvalid}
+                onKeyPress={event => {
+                  if (event.key === "Enter") {
+                      event.preventDefault();
+                      document.getElementById("login").click();
+                  }}}
               />
               <FormFeedback>
                 Oh Noes... Please enter your nickname guy !
@@ -74,6 +79,8 @@ class NameForm extends Component {
             <Button
               color={this.state.isInvalid ? "danger" : "primary"}
               onClick={this.toggle}
+              id="login"
+
             >
               Sign up
             </Button>

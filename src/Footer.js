@@ -6,7 +6,7 @@ import styles from "./footer.module.css";
 export default class Footer extends React.Component {
    render() {
       return (
-         <div style={{ position: "sticky", width: "100%" }}>
+         <div style={{ bottom: 0, position: "fixed", width: "100%" }}>
             <Navbar className={`${styles.navbar} mx-auto`} color="dark">
                <Nav>
                   <p className={`${styles.p} d-inline my-auto text-white`}>

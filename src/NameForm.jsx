@@ -52,6 +52,12 @@ class NameForm extends Component {
                      pseudo={this.state.InputValue}
                      onChange={this.handleChange}
                      invalid={this.state.isInvalid}
+                     onKeyPress={event => {
+                        if (event.key === "Enter") {
+                           event.preventDefault();
+                           this.onClick();
+                        }
+                     }}
                   />
                   <FormFeedback>Oh Noes... Please enter your nickname guy !</FormFeedback>
                </FormGroup>

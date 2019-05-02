@@ -23,7 +23,7 @@ class NameForm extends Component {
       } else {
          localStorage.setItem("pseudo", pseudo);
          axios
-            .post("http://192.168.88.228:8000/user/subscribe", {
+            .post("http://192.168.88.34:8000/user/subscribe", {
                pseudo: pseudo
             })
             .then(function(response) {

@@ -15,7 +15,7 @@ class Clicker extends Component {
       this.handleClick = this.handleClick.bind(this);
    }
    getScore() {
-      axios.get(`http://192.168.88.228:8000/user/${this.state.id}`).then(response => {
+      axios.get(`http://192.168.88.34:8000/user/${this.state.id}`).then(response => {
          if (response.data[0].score>0){
          this.setState({ score: response.data[0].score });
          } else {
@@ -38,7 +38,7 @@ class Clicker extends Component {
          score: scoreUp + 1
       };
       axios
-         .put(`http://192.168.88.228:8000/user/${this.state.id}/click`, scoreUpdate)
+         .put(`http://192.168.88.34:8000/user/${this.state.id}/click`, scoreUpdate)
          .then(response => console.log(response.data));
    };
 

@@ -15,16 +15,16 @@ class Clicker extends Component {
       this.handleClick = this.handleClick.bind(this);
    }
    getScore() {
-      axios.get(`http://192.168.88.34:8000/user/${this.state.id}`).then(response => {
-         if (response.data[0].score>0){
-         this.setState({ score: response.data[0].score });
+      axios.get(`http://localhost:8000/user/${this.state.id}`).then(response => {
+         if (response.data[0].score > 0) {
+            this.setState({ score: response.data[0].score });
          } else {
-            return <alert color="danger">Database empty, contact us for more information</alert>
+            return <alert color="danger">Database empty, contact us for more information</alert>;
          }
       });
    }
    componentDidUpdate() {
-      this.getScore();
+      // this.getScore();
    }
 
    componentDidMount() {
@@ -37,9 +37,7 @@ class Clicker extends Component {
       const scoreUpdate = {
          score: scoreUp + 1
       };
-      axios
-         .put(`http://192.168.88.34:8000/user/${this.state.id}/click`, scoreUpdate)
-         .then(response => console.log(response.data));
+      axios.put(`http://localhost:8000/user/${this.state.id}/click`, scoreUpdate).then(response => console.log(response.data));
    };
 
    render() {

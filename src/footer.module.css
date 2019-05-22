@@ -1,0 +1,12 @@
+.navbar{
+    /* margin-top: 10%; */
+    list-style: none;
+    min-height: 3vh;
+    text-align: center;
+}
+p{
+    font-size: 0.8em;
+}
+.nav{
+    margin-left: auto;
+}

@@ -1,0 +1,12 @@
+.App {
+    text-align: center;
+    background: no-repeat center fixed url("./img/backgroundd_1920_1080.png");    
+}
+#skeleton_two{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+.App-header {
+    margin-bottom: 5%;
+}

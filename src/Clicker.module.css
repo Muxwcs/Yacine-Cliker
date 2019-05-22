@@ -1,0 +1,23 @@
+h4 {
+  color: rgb(254, 255, 254);
+}
+img:hover {
+  transform: scale(1.05);
+  animation: img-spin infinite 5s linear;
+}
+.img_cookie {
+  width: 50%;
+  height: 50%;
+  animation: img-spin infinite 15s linear;
+  user-select: none;
+  margin-top: 10%;
+}
+
+@keyframes img-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

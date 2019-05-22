@@ -1,0 +1,120 @@
+import React, { Component } from "react";
+<<<<<<< HEAD
+import { Col,Button, Input, FormFeedback, FormGroup } from "reactstrap";
+import { Redirect } from "react-router-dom";
+import { axios } from "axios";
+
+=======
+import { Redirect } from "react-router-dom";
+>>>>>>> 1fde92b1c98b6de5255dc59b9a19f5dae6eb89e2
+import Layout from "./Layout";
+import NameForm from "./NameForm";
+
+export default class Homepage extends Component {
+<<<<<<< HEAD
+  constructor(props) {
+    super(props);
+    this.state = {
+      InputValue: "",
+      isInvalid: false,
+      isValid: false
+    };
+    this.handleChange= this.handleChange.bind(this);
+    this.sendForm= this.sendForm.bind(this)
+  }
+  handleChange = event => {
+    this.setState({ InputValue: event.target.value.replace(/[ ]/gi, "") });
+    this.setState({ isInvalid: false });
+  };
+
+  sendForm = () => {
+    const pseudo = this.state.InputValue;
+    if (pseudo.length === 0) {
+      this.setState({ isInvalid: true });
+    } else {
+      // localStorage.setItem("pseudo", pseudo);
+      axios.post("http://192.168.88.228:8000/user/subscribe", {
+          pseudo: pseudo
+        })
+        .then(response => {
+           console.log(pseudo);
+           
+          let id = response.data.insertId;
+          localStorage.setItem("id", id);
+          this.setState({ isValid: !this.state.isValid });
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
+  }
+
+  render() {
+    if (localStorage.getItem("id")) {
+      return <Redirect to="/game" />;
+    }
+    return (
+      <Layout>
+        <Col lg={{ size: 2, offset: 5 }}>
+          {/* <NameForm
+            value={this.state.InputValue}
+            handleClick={this.sendForm.bind(this)}
+            handleChange={this.handleChange.bind(this)}
+          /> */}
+          <>
+            <FormGroup>
+              <Input
+                id="name"
+                type="text"
+                pseudo={this.state.In}
+                onChange={this.handleChange}
+                invalid={this.state.isInvalid}
+              />
+              <FormFeedback>
+                Oh Noes... Please enter your nickname guy !
+              </FormFeedback>
+            </FormGroup>
+            <Button
+              color={this.state.isInvalid ? "danger" : "primary"}
+              onClick={this.sendForm}
+            >
+              Sign up
+            </Button>
+          </>
+        </Col>
+      </Layout>
+    );
+  }
+=======
+   constructor(props) {
+      super(props);
+      this.state = {
+         redirect: false
+      };
+   }
+   handleRedirect() {
+      this.setState({
+         redirect: true
+      });
+   }
+
+   componentDidMount() {
+      if (localStorage.getItem("pseudo")) {
+         this.setState({
+            redirect: true
+         });
+      }
+   }
+
+   render() {
+      if (this.state.redirect) {
+         return <Redirect to="/game" />;
+      }
+      return (
+         <Layout style={{ alignContent: "center" }}>
+            <NameForm redirect={this.handleRedirect.bind(this)} />
+         </Layout>
+      );
+   }
+>>>>>>> 1fde92b1c98b6de5255dc59b9a19f5dae6eb89e2
+}

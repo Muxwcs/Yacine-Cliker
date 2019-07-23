@@ -8,13 +8,13 @@ export default class Tableau extends React.Component {
          users: []
       };
    }
-   // Rafraichissement du tableau (timer 100 ms)
-   componentDidMount() {
-      this.tableauRefresh = setInterval(() => this.refresh(), 250);
-   }
-   componentWillUnmount() {
-      clearInterval(this.tableauRefresh);
-   }
+   // Rafraichissement du tableau (timer 100 ms) à décommenter une fois le back déployé
+   // componentDidMount() {
+   //    this.tableauRefresh = setInterval(() => this.refresh(), 250);
+   // }
+   // componentWillUnmount() {
+   //    clearInterval(this.tableauRefresh);
+   // }
    // Récupération des users (mapping)
    refresh() {
       Axios.get("http://localhost:8000/user/").then(response => {

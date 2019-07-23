@@ -14,22 +14,20 @@ class Clicker extends Component {
       };
       this.handleClick = this.handleClick.bind(this);
    }
-   getScore() {
-      axios.get(`http://localhost:8000/user/${this.state.id}`).then(response => {
-         if (response.data[0].score > 0) {
-            this.setState({ score: response.data[0].score });
-         } else {
-            return <alert color="danger">Database empty, contact us for more information</alert>;
-         }
-      });
-   }
-   componentDidUpdate() {
-      // this.getScore();
-   }
+   // getScore() {
+   //    axios.get(`http://localhost:8000/user/${this.state.id}`).then(response => {
+   //       if (response.data[0].score > 0) {
+   //          this.setState({ score: response.data[0].score });
+   //       } else {
+   //          return <alert color="danger">Database empty, contact us for more information</alert>;
+   //       }
+   //    });
+   // }
+   
 
-   componentDidMount() {
-      this.getScore();
-   }
+   // componentDidMount() {
+   //    this.getScore();
+   // }
    // sur click : variable à renvoyer : score dans pseudo
    handleClick = event => {
       this.setState({ score: this.state.score + 1 });
